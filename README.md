@@ -26,8 +26,8 @@
 <h2>Contato</h2>
 <p>Caso tenha dúvidas ou sugestões, entre em contato:</p>
 <ul>
-    <li>Email: <a href="mailto:pedrohrodrigues86@gmail.com">seu-email@email.com</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/pedro-rodrigs" target="_blank">seu-perfil</a></li>
+    <li>Email: <a href="mailto:pedrohrodrigues86@gmail.com">pedrohrodrigues86@gmail.com</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/pedro-rodrigs" target="_blank">Pedro Rodrigues</a></li>
 </ul>
 
 <h2>Licença</h2>
