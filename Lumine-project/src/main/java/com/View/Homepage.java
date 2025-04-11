@@ -7,9 +7,14 @@ import java.awt.event.ActionListener;
 public class Homepage {
     public JPanel jPanelPrincipal;
     public JMenuBar jMenuBarPrincipal;
-    public JMenu jMenuPrincipal;
+    public JMenu jMenuCadastro;
     public JMenuItem jMenuItemPessoas;
     public JMenuItem jMenuItemProdutos;
+    public JPanel jPanelTopo;
+    public JPanel jPanelImagem;
+    private JMenu jMenuRelatorio;
+    private JMenu jMenuSair;
+    private JMenuItem jMenuItemSair;
 
     public Homepage() {
         jMenuItemPessoas.addActionListener(new ActionListener() {
