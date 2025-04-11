@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bank System/Bank System.iml" filepath="$PROJECT_DIR$/Bank System/Bank System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lumine-project/Lumine-project.iml" filepath="$PROJECT_DIR$/Lumine-project/Lumine-project.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-pessoal-projects.iml" filepath="$PROJECT_DIR$/.idea/java-pessoal-projects.iml" />
     </modules>
   </component>
