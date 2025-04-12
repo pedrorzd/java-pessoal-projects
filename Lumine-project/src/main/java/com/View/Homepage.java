@@ -28,5 +28,19 @@ public class Homepage {
            @Override
            public void actionPerformed(ActionEvent e) {new Products();}
         });
+
+        jMenuItemSair.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int resposta = JOptionPane.showConfirmDialog(null, "Deseja sair?",
+                        "Saida do Sistema", JOptionPane.YES_NO_OPTION);
+                if (resposta == JOptionPane.YES_OPTION){
+                    System.exit(0);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Obrigado por ficar!");
+                }
+            }
+        });
+
     }
 }

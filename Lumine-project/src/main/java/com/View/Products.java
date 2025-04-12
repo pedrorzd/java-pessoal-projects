@@ -12,7 +12,7 @@ public class Products extends JFrame {
     public Products(){
         setContentPane(jPanelProdutos);
         setSize(500, 500);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         pack();
         setVisible(true);

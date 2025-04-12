@@ -13,7 +13,7 @@ public class People extends JFrame {
     public People() {
         setContentPane(jPanelPessoas);
         setSize(500, 500);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         pack();
         setVisible(true);

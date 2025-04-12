@@ -12,7 +12,7 @@ public class App extends JFrame {
         jf.setTitle("Lumine Glam");
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jf.setContentPane(new Homepage().jPanelPrincipal);
-        jf.setSize(500,500);
+        jf.setSize(800,600);
         jf.setLocationRelativeTo(null);
         jf.setVisible(true);
 
