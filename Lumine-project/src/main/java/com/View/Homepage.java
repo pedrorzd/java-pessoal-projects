@@ -14,6 +14,7 @@ public class Homepage {
     public JPanel jPanelImagem;
     private JMenu jMenuRelatorio;
     private JMenu jMenuSair;
+    private JMenu jMenuVendas;
     private JMenuItem jMenuItemSair;
 
     public Homepage() {

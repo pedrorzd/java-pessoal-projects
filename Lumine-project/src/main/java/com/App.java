@@ -1,6 +1,6 @@
 package main.java.com;
 
-import main.java.com.View.Homepage;
+import main.java.com.View.*;
 
 import javax.swing.*;
 import java.security.Principal;
