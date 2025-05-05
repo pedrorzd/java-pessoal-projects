@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Homepage {
+
+
+public class Homepage extends JFrame {
     public JPanel jPanelPrincipal;
     public JMenuBar jMenuBarPrincipal;
     public JMenu jMenuCadastro;
@@ -18,6 +20,12 @@ public class Homepage {
     private JMenuItem jMenuItemSair;
 
     public Homepage() {
+        setContentPane(jPanelPrincipal);
+        setSize(850,750);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
+
         jMenuItemPessoas.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,4 +52,6 @@ public class Homepage {
         });
 
     }
+
+
 }

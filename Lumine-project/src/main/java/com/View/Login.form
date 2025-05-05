@@ -21,7 +21,17 @@
           <background color="-16621965"/>
         </properties>
         <border type="none"/>
-        <children/>
+        <children>
+          <component id="2bc8c" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="img/user-login-128px.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
       </grid>
       <grid id="66529" binding="JPanelUsuario" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
@@ -50,13 +60,13 @@
           <component id="c8bd2" class="javax.swing.JTextField" binding="JFieldUsuario">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="250" height="15"/>
+                <preferred-size width="250" height="36"/>
               </grid>
             </constraints>
             <properties>
               <background color="-16621965"/>
               <caretColor color="-16621965"/>
-              <font name="Arial" size="12"/>
+              <font name="Arial" size="14"/>
               <foreground color="-2172450"/>
               <selectionColor color="-16604994"/>
               <text value=""/>
@@ -78,13 +88,13 @@
           <component id="eb06a" class="javax.swing.JPasswordField" binding="JFieldSenha">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="250" height="15"/>
+                <preferred-size width="250" height="36"/>
               </grid>
             </constraints>
             <properties>
               <background color="-16621965"/>
               <caretColor color="-16621965"/>
-              <font name="Arial" size="12"/>
+              <font name="Arial" size="14"/>
               <foreground color="-2172450"/>
               <selectionColor color="-16604994"/>
               <text value=""/>
@@ -130,6 +140,7 @@
               <font size="14"/>
               <foreground color="-2172450"/>
               <horizontalTextPosition value="11"/>
+              <icon value="img/limpar-button-24px.png"/>
               <text value="Limpar"/>
             </properties>
           </component>
@@ -142,6 +153,7 @@
               <borderPainted value="false"/>
               <font size="14"/>
               <foreground color="-2172450"/>
+              <icon value="img/login-button.png"/>
               <margin top="3" left="3" bottom="3" right="3"/>
               <text value="Entrar"/>
             </properties>

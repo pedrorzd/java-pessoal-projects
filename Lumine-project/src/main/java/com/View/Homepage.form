@@ -24,7 +24,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="2767c" class="javax.swing.JMenuBar" binding="jMenuBarPrincipal" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="2767c" class="javax.swing.JMenuBar" binding="jMenuBarPrincipal" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -40,7 +40,7 @@
                 </constraints>
                 <properties>
                   <background color="-16621965"/>
-                  <font size="20"/>
+                  <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
                   <icon value="img/adicionar.png"/>
                   <text value="Cadastro"/>
@@ -50,17 +50,23 @@
                   <component id="a73aa" class="javax.swing.JMenuItem" binding="jMenuItemPessoas">
                     <constraints/>
                     <properties>
-                      <background color="-865832"/>
-                      <foreground color="-16624781"/>
+                      <background color="-16621965"/>
+                      <font size="14"/>
+                      <foreground color="-2172450"/>
+                      <icon value="img/pessoas-16px.png"/>
+                      <margin top="4" left="4" bottom="4" right="4"/>
                       <text value="Pessoas"/>
                     </properties>
                   </component>
                   <component id="37cec" class="javax.swing.JMenuItem" binding="jMenuItemProdutos">
                     <constraints/>
                     <properties>
-                      <background color="-865832"/>
-                      <foreground color="-16624781"/>
+                      <background color="-16621965"/>
+                      <font size="14"/>
+                      <foreground color="-2172450"/>
                       <hideActionText value="true"/>
+                      <icon value="img/adicionar-prod-16px.png"/>
+                      <margin top="4" left="4" bottom="4" right="4"/>
                       <text value="Produtos"/>
                     </properties>
                   </component>
@@ -79,7 +85,7 @@
                 </constraints>
                 <properties>
                   <background color="-16621965"/>
-                  <font size="20"/>
+                  <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
                   <icon value="img/relatorios-2.png"/>
                   <text value="Relatório"/>
@@ -94,39 +100,13 @@
                 </constraints>
                 <properties>
                   <background color="-16621965"/>
-                  <font size="20"/>
+                  <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
                   <icon value="img/venda.png"/>
                   <text value="Vendas"/>
                 </properties>
                 <border type="none"/>
                 <children>
-                  <grid id="f146f" class="javax.swing.JMenu" binding="jMenuSair" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <background color="-16621965"/>
-                      <font size="20"/>
-                      <foreground color="-2172450"/>
-                      <icon value="img/sair.png"/>
-                      <text value="Sair"/>
-                    </properties>
-                    <border type="none"/>
-                    <children>
-                      <component id="7d4c6" class="javax.swing.JMenuItem" binding="jMenuItemSair">
-                        <constraints/>
-                        <properties>
-                          <background color="-865832"/>
-                          <enabled value="true"/>
-                          <foreground color="-16624781"/>
-                          <hideActionText value="true"/>
-                          <icon value="img/del.png"/>
-                          <text value="Confirmar"/>
-                        </properties>
-                      </component>
-                    </children>
-                  </grid>
                   <hspacer id="5d1c8">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -137,6 +117,32 @@
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                     </constraints>
                   </vspacer>
+                </children>
+              </grid>
+              <grid id="f146f" class="javax.swing.JMenu" binding="jMenuSair" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16621965"/>
+                  <font name="Arial" size="20"/>
+                  <foreground color="-2172450"/>
+                  <icon value="img/sair.png"/>
+                  <text value="Sair"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="7d4c6" class="javax.swing.JMenuItem" binding="jMenuItemSair">
+                    <constraints/>
+                    <properties>
+                      <background color="-865832"/>
+                      <enabled value="true"/>
+                      <foreground color="-16624781"/>
+                      <hideActionText value="true"/>
+                      <icon value="img/del.png"/>
+                      <text value="Confirmar"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
             </children>

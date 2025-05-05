@@ -9,13 +9,18 @@ public class People extends JFrame {
     private JTextField textFieldEmail;
     private JTextField textFieldCpf;
     private JTextField textFieldTelefone;
+    private JButton editarButton;
+    private JButton limparButton;
+    private JButton excluirButton;
+    private JPanel jPanelButtons;
+    private JPanel JPanelnputs;
 
     public People() {
         setContentPane(jPanelPessoas);
-        setSize(500, 500);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setTitle("Cadastro de Pessoas");
+        setSize(600,450);
         setLocationRelativeTo(null);
-        pack();
         setVisible(true);
     }
 }
