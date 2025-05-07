@@ -39,7 +39,12 @@ public class Login extends JFrame {
                         Homepage telaPrincipal = new Homepage();
                         telaPrincipal.setVisible(true);
                     });
+                } else if (usuario.isEmpty() || senha.isEmpty() || perfil.isEmpty()) {
+                    JOptionPane.showMessageDialog(null,"O login falhou!!"+
+                            "\nAlgum dado obrigatório ficou de fora, preencha todos!");
                 } else {
+                    JOptionPane.showMessageDialog(null,"O login falhou!!"+
+                            "\nVerifique os dados e tente novamente!");
                     JFieldUsuario.requestFocus();
                     JFieldUsuario.setText("");
                     JFieldSenha.setText("");

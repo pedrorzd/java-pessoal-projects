@@ -18,6 +18,7 @@ public class Homepage extends JFrame {
     private JMenu jMenuSair;
     private JMenu jMenuVendas;
     private JMenuItem jMenuItemSair;
+    private JMenuItem jMenuItemFornecedor;
 
     public Homepage() {
         setContentPane(jPanelPrincipal);
@@ -36,6 +37,11 @@ public class Homepage extends JFrame {
         jMenuItemProdutos.addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {new Products();}
+        });
+
+        jMenuItemFornecedor.addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {new Suppliers();}
         });
 
         jMenuItemSair.addActionListener(new ActionListener() {

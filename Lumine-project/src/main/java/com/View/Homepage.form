@@ -42,7 +42,7 @@
                   <background color="-16621965"/>
                   <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
-                  <icon value="img/adicionar.png"/>
+                  <icon value="main/java/com/View/img/adicionar.png"/>
                   <text value="Cadastro"/>
                 </properties>
                 <border type="none"/>
@@ -51,9 +51,9 @@
                     <constraints/>
                     <properties>
                       <background color="-16621965"/>
-                      <font size="14"/>
+                      <font size="16"/>
                       <foreground color="-2172450"/>
-                      <icon value="img/pessoas-16px.png"/>
+                      <icon value="main/java/com/View/img/pessoas-16px.png"/>
                       <margin top="4" left="4" bottom="4" right="4"/>
                       <text value="Pessoas"/>
                     </properties>
@@ -62,20 +62,25 @@
                     <constraints/>
                     <properties>
                       <background color="-16621965"/>
-                      <font size="14"/>
+                      <font size="16"/>
                       <foreground color="-2172450"/>
                       <hideActionText value="true"/>
-                      <icon value="img/adicionar-prod-16px.png"/>
+                      <icon value="main/java/com/View/img/adicionar-prod-16px.png"/>
                       <margin top="4" left="4" bottom="4" right="4"/>
                       <text value="Produtos"/>
                     </properties>
                   </component>
-                  <hspacer id="b103e">
+                  <component id="e076a" class="javax.swing.JMenuItem" binding="jMenuItemFornecedor">
                     <constraints/>
-                  </hspacer>
-                  <vspacer id="d4bbb">
-                    <constraints/>
-                  </vspacer>
+                    <properties>
+                      <background color="-16621965"/>
+                      <font name="Arial" size="16"/>
+                      <foreground color="-2172450"/>
+                      <icon value="main/java/com/View/img/fornecedores-button-16px.png"/>
+                      <margin top="4" left="4" bottom="4" right="4"/>
+                      <text value="Fornecedor"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
               <grid id="48693" class="javax.swing.JMenu" binding="jMenuRelatorio" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -87,7 +92,7 @@
                   <background color="-16621965"/>
                   <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
-                  <icon value="img/relatorios-2.png"/>
+                  <icon value="main/java/com/View/img/relatorios-2.png"/>
                   <text value="Relatório"/>
                 </properties>
                 <border type="none"/>
@@ -102,7 +107,7 @@
                   <background color="-16621965"/>
                   <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
-                  <icon value="img/venda.png"/>
+                  <icon value="main/java/com/View/img/venda.png"/>
                   <text value="Vendas"/>
                 </properties>
                 <border type="none"/>
@@ -127,7 +132,7 @@
                   <background color="-16621965"/>
                   <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
-                  <icon value="img/sair.png"/>
+                  <icon value="main/java/com/View/img/sair.png"/>
                   <text value="Sair"/>
                 </properties>
                 <border type="none"/>
@@ -165,7 +170,7 @@
             </constraints>
             <properties>
               <background color="-16621965"/>
-              <icon value="img/moda.png"/>
+              <icon value="main/java/com/View/img/moda.png"/>
               <text value=""/>
             </properties>
           </component>

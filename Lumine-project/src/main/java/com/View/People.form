@@ -32,8 +32,9 @@
             </constraints>
             <properties>
               <background color="-16768427"/>
+              <font name="Arial" size="16"/>
               <foreground color="-2172450"/>
-              <icon value="img/adicionar-16px.png"/>
+              <icon value="main/java/com/View/img/adicionar-16px.png"/>
               <text value="Cadastrar"/>
             </properties>
           </component>
@@ -43,8 +44,9 @@
             </constraints>
             <properties>
               <background color="-16768427"/>
+              <font name="Arial" size="16"/>
               <foreground color="-2172450"/>
-              <icon value="img/editar-button-16px.png"/>
+              <icon value="main/java/com/View/img/editar-button-16px.png"/>
               <text value="Editar"/>
             </properties>
           </component>
@@ -54,8 +56,9 @@
             </constraints>
             <properties>
               <background color="-16768427"/>
+              <font name="Arial" size="16"/>
               <foreground color="-2172450"/>
-              <icon value="img/limpar-icone-16px.png"/>
+              <icon value="main/java/com/View/img/limpar-icone-16px.png"/>
               <text value="Limpar"/>
             </properties>
           </component>
@@ -65,8 +68,9 @@
             </constraints>
             <properties>
               <background color="-16768427"/>
+              <font name="Arial" size="16"/>
               <foreground color="-2172450"/>
-              <icon value="img/apagar-button-16px.png"/>
+              <icon value="main/java/com/View/img/apagar-button-16px.png"/>
               <text value="Excluir"/>
             </properties>
           </component>
