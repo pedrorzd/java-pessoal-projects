@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import main.java.com.View.*;
+
+import main.java.com.Model.LoginDAO;
+import main.java.com.Model.FabricaConexao;
 
 public class Login extends JFrame {
     public JPanel JPanelLogin;
@@ -26,8 +28,9 @@ public class Login extends JFrame {
                 String usuario = JFieldUsuario.getText();
                 String senha = new String(JFieldSenha.getPassword());
                 String perfil = String.valueOf(JClasse.getSelectedItem());
+                LoginDAO loginDAO = new LoginDAO();
 
-                if (usuario.equals("Pedro") && senha.equals("12345")) {
+                if (loginDAO.validarLogin (usuario, senha)) {
                     JOptionPane.showMessageDialog(null,
                             "Login efetuado com sucesso! " +
                                     "\nUsuário: " + usuario +

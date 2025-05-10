@@ -18,3 +18,21 @@ public class App extends JFrame {
 
     }
 }
+
+/*
+create database lumineGlam;
+use lumineGlam;
+
+create table users(
+idUser int primary key auto_increment,
+userName varchar (50) not null,
+password varchar(10)
+);
+
+select * from users;
+insert into users(userName, password) values
+("pedrorzd","3643");
+insert into users(userName, password) values
+("thiagin69","12345");
+
+ */
