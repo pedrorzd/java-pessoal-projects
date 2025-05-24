@@ -43,7 +43,7 @@
                   <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
                   <icon value="main/java/com/View/img/adicionar.png"/>
-                  <text value="Cadastro"/>
+                  <text value=""/>
                 </properties>
                 <border type="none"/>
                 <children>
@@ -55,7 +55,7 @@
                       <foreground color="-2172450"/>
                       <icon value="main/java/com/View/img/pessoas-16px.png"/>
                       <margin top="4" left="4" bottom="4" right="4"/>
-                      <text value="Pessoas"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="37cec" class="javax.swing.JMenuItem" binding="jMenuItemProdutos">
@@ -67,7 +67,7 @@
                       <hideActionText value="true"/>
                       <icon value="main/java/com/View/img/adicionar-prod-16px.png"/>
                       <margin top="4" left="4" bottom="4" right="4"/>
-                      <text value="Produtos"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="e076a" class="javax.swing.JMenuItem" binding="jMenuItemFornecedor">
@@ -78,7 +78,7 @@
                       <foreground color="-2172450"/>
                       <icon value="main/java/com/View/img/fornecedores-button-16px.png"/>
                       <margin top="4" left="4" bottom="4" right="4"/>
-                      <text value="Fornecedor"/>
+                      <text value=""/>
                     </properties>
                   </component>
                 </children>
@@ -93,7 +93,7 @@
                   <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
                   <icon value="main/java/com/View/img/relatorios-2.png"/>
-                  <text value="Relatório"/>
+                  <text value=""/>
                 </properties>
                 <border type="none"/>
                 <children/>
@@ -108,20 +108,21 @@
                   <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
                   <icon value="main/java/com/View/img/venda.png"/>
-                  <text value="Vendas"/>
+                  <text value=""/>
                 </properties>
                 <border type="none"/>
                 <children>
-                  <hspacer id="5d1c8">
-                    <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                  </hspacer>
                   <vspacer id="ffed8">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                     </constraints>
                   </vspacer>
+                  <component id="9bc2e" class="javax.swing.JMenuItem" binding="vendas">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                  </component>
                 </children>
               </grid>
               <grid id="f146f" class="javax.swing.JMenu" binding="jMenuSair" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
@@ -133,7 +134,7 @@
                   <font name="Arial" size="20"/>
                   <foreground color="-2172450"/>
                   <icon value="main/java/com/View/img/sair.png"/>
-                  <text value="Sair"/>
+                  <text value=""/>
                 </properties>
                 <border type="none"/>
                 <children>

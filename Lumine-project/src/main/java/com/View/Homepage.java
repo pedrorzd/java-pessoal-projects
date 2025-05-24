@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-
 public class Homepage extends JFrame {
     public JPanel jPanelPrincipal;
     public JMenuBar jMenuBarPrincipal;
@@ -19,6 +18,7 @@ public class Homepage extends JFrame {
     private JMenu jMenuVendas;
     private JMenuItem jMenuItemSair;
     private JMenuItem jMenuItemFornecedor;
+    private JMenuItem vendas;
 
     public Homepage() {
         setContentPane(jPanelPrincipal);
@@ -57,7 +57,12 @@ public class Homepage extends JFrame {
             }
         });
 
+
+        vendas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Sell();
+            }
+        });
     }
-
-
 }
