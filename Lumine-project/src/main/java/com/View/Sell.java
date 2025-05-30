@@ -3,6 +3,7 @@ package main.java.com.View;
 import javax.swing.*;
 
 import main.java.com.Controller.ClienteDAO;
+import main.java.com.Model.Clientes;
 import main.java.com.View.Homepage;
 
 import java.sql.ResultSet;
@@ -36,22 +37,20 @@ public class Sell extends JFrame{
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
-        //preencherComboClientes();
-        //preencherComboClientes();
     }
     private void preencherComboClintes(){
         try {
-            ModelClientes clientes = new ModelClientes();
+            Clientes clientes = new Clientes();
             ClienteDAO cli = new ClienteDAO();
             ResultSet rs = cli.ListaClientes();
             ArrayList<String> listaClientes = new ArrayList<>();
             while (rs.next()){
                 clientes.setNome(rs.getNString("nome"));
                 clientes.setCpf(rs.getNString("cpf"));
-                listaClientes.add(clientes.getNome()+ "-"+clientes.getCpf());
+                listaClientes.add(clientes.getNome()+"-"+clientes.getCpf());
             }
             for (String pecorrer : listaClientes){
-                jcbClientes.addItem(pecorrer);
+               comboBoxCliente.addItem(pecorrer);
             }
         }
         catch (SQLException e){

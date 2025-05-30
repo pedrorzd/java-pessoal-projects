@@ -1,6 +1,6 @@
 package main.java.com.Controller;
 
-import main.java.com.Model.FabricaConexao;
+import main.java.com.DAO.FabricaConexao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
