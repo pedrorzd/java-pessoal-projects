@@ -121,7 +121,9 @@
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <icon value="main/java/com/View/img/venda.png"/>
+                    </properties>
                   </component>
                 </children>
               </grid>
@@ -145,7 +147,6 @@
                       <enabled value="true"/>
                       <foreground color="-16624781"/>
                       <hideActionText value="true"/>
-                      <icon value="img/del.png"/>
                       <text value="Confirmar"/>
                     </properties>
                   </component>

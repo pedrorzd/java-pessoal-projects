@@ -1,6 +1,8 @@
 package main.java.com.View;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class People extends JFrame {
     public JPanel jPanelPessoas;
@@ -22,6 +24,13 @@ public class People extends JFrame {
         setSize(600,450);
         setLocationRelativeTo(null);
         setVisible(true);
+
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 }
 

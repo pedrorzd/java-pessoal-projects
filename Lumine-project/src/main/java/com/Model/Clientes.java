@@ -4,7 +4,7 @@ public class Clientes {
     private int id;
     private String nome;
     private String cpf;
-    private String endereco;
+    private String email;
     private String telefone;
 
     public int getId() {
@@ -31,12 +31,12 @@ public class Clientes {
         this.cpf = cpf;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getTelefone() {
