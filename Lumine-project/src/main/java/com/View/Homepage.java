@@ -30,7 +30,7 @@ public class Homepage extends JFrame {
         jMenuItemPessoas.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new People();
+                new Clientes();
             }
         });
 

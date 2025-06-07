@@ -7,7 +7,6 @@ import javax.swing.*;
 
 public class App extends JFrame {
     public static void main(String[] args) {
-
         JFrame jf = new JFrame();
         jf.setTitle("Lumine Glam");
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -15,7 +14,6 @@ public class App extends JFrame {
         jf.setSize(850,750);
         jf.setLocationRelativeTo(null);
         jf.setVisible(true);
-
     }
 }
 
@@ -82,4 +80,6 @@ insert into Users(userName, password, profile) values
 ("pedrorzd","3643", "administrador");
 insert into Users(userName, password, profile) values
 ("thiagin69","12345", "usuario");
+insert into Users(userName, password, profile) values
+("teste","teste","administrador");
  */

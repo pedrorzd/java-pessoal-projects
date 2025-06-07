@@ -3,8 +3,10 @@ package main.java.com.View;
 import javax.swing.*;
 
 import main.java.com.Controller.ClienteDAO;
+import main.java.com.Controller.VendedorDAO;
 import main.java.com.DAO.FabricaConexao;
 import main.java.com.Model.Clientes;
+import main.java.com.Model.Vendedores;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,9 +33,14 @@ public class Sell extends JFrame{
     private JTextField textField7;
     private JTextField textField8;
     private JTextField textField9;
+    private StringBuilder itensSelecionados;
     private JPanel JPanelVendas;
     private JButton inserirButton;
     private JComboBox jcbProduto;
+    private JLabel labelListaProd;
+    private JLabel labelValorTotal;
+
+    double acumulado = 0.0;
 
     public Sell(){
         setSize(1300,1000);
@@ -43,6 +50,8 @@ public class Sell extends JFrame{
         setVisible(true);
         preencherComboProduto();
         preencherComboClintes();
+        preencherComboVendedores();
+        itensSelecionados = new StringBuilder("Valor total: <br>");
 
         jcbProduto.addActionListener(new ActionListener() {
             @Override
@@ -66,6 +75,31 @@ public class Sell extends JFrame{
                         JOptionPane.showMessageDialog(null, "Erro ao buscar preço: "+ ex.getMessage());
                     }
                 }
+            }
+        });
+        inserirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 String nomeProduto = (String) jcbProduto.getSelectedItem();
+                 String precoProduto = (String) textField5.getText();
+
+                 String precoProdutoTexto = textField5.getText();
+
+                 if (!precoProdutoTexto.isEmpty()){
+                     precoProdutoTexto = precoProdutoTexto.replace("," , ".");
+                     double precoProdutoValor = Double.parseDouble(precoProdutoTexto);
+
+                     acumulado += precoProdutoValor;
+
+                     labelListaProd.setText("<html>" + itensSelecionados.toString()+"</html>");
+
+                     textField5.setText("");
+
+                     itensSelecionados.append(nomeProduto).append("<br>");
+                     itensSelecionados.append(precoProdutoTexto).append("<br>");
+
+                     labelValorTotal.setText("Valor total: " + acumulado);
+                 }
             }
         });
     }
@@ -107,4 +141,24 @@ public class Sell extends JFrame{
         }
     }
 
+    private void preencherComboVendedores(){
+      try {
+          Vendedores vendedor = new Vendedores();
+          VendedorDAO cli = new VendedorDAO();
+          ResultSet rs = cli.ListaVendedores();
+          ArrayList<String> listaVendedores = new ArrayList<>();
+          while (rs.next()) {
+            vendedor.setNome(rs.getNString("nome"));
+            vendedor.setCpf(rs.getNString("cpf"));
+            listaVendedores.add(vendedor.getNome()+"-"+vendedor.getCpf());
+          }
+          for (String pecorrer : listaVendedores){
+              comboBoxVendedor.addItem(pecorrer);
+          }
+      }
+      catch (SQLException e){
+            throw new RuntimeException(e);
+      }
+
+    }
 }
