@@ -9,10 +9,7 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Vector;
 
 public class Clientes extends JFrame {
@@ -59,7 +56,30 @@ public class Clientes extends JFrame {
                 salvaClienteBanco.InserirClienteBD(people);
             }
         });
+        /*
+        excluirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // textid dando erro por que é o campo do ID, como no meu nao tem, da um erro
+                int id = Integer.parseInt(textId.getText().toString());
+                main.java.com.Model.Clientes clientes = new main.java.com.Model.Clientes();
+                clientes.setId(id);
+                ClienteDAO cliDAO = new ClienteDAO();
+                cliDAO.deletaDados(clientes);
+                carregarDados();
+                limpaDados();
+            }
+        });
+         */
+        limparButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                limpaDados();
+            }
+        });
 
+
+        //selecionar linha da tabela
         tabelaCliente.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -102,6 +122,7 @@ public class Clientes extends JFrame {
                 linha.add(rs.getString("telefone"));
                 dados.add(linha);
             }
+            //cria tabela com linhas e colunas
             tabelaCliente.setModel(new DefaultTableModel(dados, colunas));
             tabelaCliente.setRowHeight(30);
         }
@@ -110,6 +131,12 @@ public class Clientes extends JFrame {
         }
     }
 
+    public void limpaDados(){
+        textFieldTelefone.setText("");
+        textFieldEmail.setText("");
+        textFieldCpf.setText("");
+        textFieldName.setText("");
+    }
 }
 
 

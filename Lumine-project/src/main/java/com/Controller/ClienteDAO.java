@@ -23,8 +23,8 @@ public class ClienteDAO {
     }
 
     public void InserirClienteBD(Clientes c){
-        String sql = "INSERT INTO Clientes(nome, cpf, email, telefone) VALUES" +
-                "?, ?, ?, ?";
+        String sql = "INSERT INTO Clientes(nome, cpf, email, telefone) VALUES (?, ?, ?, ?)";
+
         try {
 
             Connection conn = FabricaConexao.conectar();
@@ -40,4 +40,16 @@ public class ClienteDAO {
         }
     }
 
+    public void deletaDados(main.java.com.Model.Clientes c){
+        String query = "DELETE FROM Clientes WHERE id = ?";
+
+        try(Connection connection = FabricaConexao.conectar();
+            PreparedStatement pstmt = connection.prepareStatement(query)){
+            pstmt.setInt(1, c.getId());
+            pstmt.executeQuery();
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
 }
