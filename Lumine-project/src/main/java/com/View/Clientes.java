@@ -1,142 +1,81 @@
 package main.java.com.View;
 
-import main.java.com.Controller.ClienteDAO;
-import main.java.com.DAO.FabricaConexao;
+import main.java.com.Controller.ClientesDAO;
 
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.*;
-import java.util.Vector;
 
 public class Clientes extends JFrame {
-    public JPanel jPanelPessoas;
-    private JButton saveButton;
-    private JTextField textFieldName;
+    private JPanel JPanelClientes;
+    private JPanel JPanelDados;
+    private JTextField textFieldNome;
+    private JTextField textFieldCPF;
     private JTextField textFieldEmail;
-    private JTextField textFieldCpf;
     private JTextField textFieldTelefone;
+    private JTextField textFieldEndereco;
+    private JPanel JPanelButtons;
+    private JButton excluirButton;
     private JButton editarButton;
     private JButton limparButton;
-    private JButton excluirButton;
-    private JPanel jPanelButtons;
-    private JPanel JPanelnputs;
-    private JPanel tabelaClientes;
-    private JTable tabelaCliente;
+    private JButton salvarButton;
 
     public Clientes() {
-        setContentPane(jPanelPessoas);
+        setSize(500,500);
+        setContentPane(JPanelClientes);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Pessoas");
-        setSize(600,450);
         setLocationRelativeTo(null);
         setVisible(true);
-        carregarDados();
 
-        saveButton.addActionListener(new ActionListener() {
+        //botao de salvar
+        salvarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                carregarDados();
-
-                String nome = textFieldName.getText().toString().trim();
-                String cpf = textFieldCpf.getText().toString().trim();
+                String nome = textFieldNome.getText().toString().trim();
+                String cpf = textFieldCPF.getText().toString().trim();
                 String email = textFieldEmail.getText().toString().trim();
                 String telefone = textFieldTelefone.getText().toString().trim();
+                String endereco = textFieldEndereco.getText().toString().trim();
 
-                main.java.com.Model.Clientes people = new main.java.com.Model.Clientes();
-                people.setNome(nome);
-                people.setCpf(cpf);
-                people.setEmail(email);
-                people.setTelefone(telefone);
+                main.java.com.Model.Clientes cliente = new main.java.com.Model.Clientes();
+                cliente.setNome(nome);
+                cliente.setCpf(cpf);
+                cliente.setEmail(email);
+                cliente.setTelefone(telefone);
+                cliente.setEndereco(endereco);
 
-                ClienteDAO salvaClienteBanco = new ClienteDAO();
-                salvaClienteBanco.InserirClienteBD(people);
+                ClientesDAO clientesDAO = new ClientesDAO();
+                clientesDAO.InserirClienteBD(cliente);
             }
         });
-        /*
-        excluirButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // textid dando erro por que é o campo do ID, como no meu nao tem, da um erro
-                int id = Integer.parseInt(textId.getText().toString());
-                main.java.com.Model.Clientes clientes = new main.java.com.Model.Clientes();
-                clientes.setId(id);
-                ClienteDAO cliDAO = new ClienteDAO();
-                cliDAO.deletaDados(clientes);
-                carregarDados();
-                limpaDados();
-            }
-        });
-         */
+        //botao de limpar
         limparButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                limpaDados();
+                limparDados();
             }
         });
-
-
-        //selecionar linha da tabela
-        tabelaCliente.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+        //botao de editar
+        editarButton.addActionListener(new ActionListener() {
             @Override
-            public void valueChanged(ListSelectionEvent e) {
-                if (!e.getValueIsAdjusting()){
-                    int linhaSelecionada = tabelaCliente.getSelectedRow();
-                    if (linhaSelecionada !=1){
+            public void actionPerformed(ActionEvent e) {
 
-                        textFieldName.setText(tabelaCliente.getValueAt(linhaSelecionada, 0).toString());
-                        textFieldCpf.setText(tabelaCliente.getValueAt(linhaSelecionada, 1).toString());
-                        textFieldEmail.setText(tabelaCliente.getValueAt(linhaSelecionada, 2).toString());
-                        textFieldTelefone.setText(tabelaCliente.getValueAt(linhaSelecionada, 3).toString());
-
-                    }
-                }
             }
         });
+        //botao de excluir
+        /*
+        excluirButton.addActionListener(new ActionListener() {
+
+        });
+         */
     }
 
-    public void carregarDados(){
-        try(Connection conn = FabricaConexao.conectar()){
-
-            String query = "Select id, nome, cpf, endereco, telefone From Clientes";
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-
-            Vector<String> colunas = new Vector<>();
-            colunas.add("Id");
-            colunas.add("Nome");
-            colunas.add("Cpf");
-            colunas.add("Endereço");
-            colunas.add("Telefone");
-
-            Vector<Vector<Object>> dados = new Vector<>();
-            while (rs.next()){
-                Vector<Object> linha = new Vector<>();
-                linha.add(rs.getString("id"));
-                linha.add(rs.getString("nome"));
-                linha.add(rs.getString("cpf"));
-                linha.add(rs.getString("endereco"));
-                linha.add(rs.getString("telefone"));
-                dados.add(linha);
-            }
-            //cria tabela com linhas e colunas
-            tabelaCliente.setModel(new DefaultTableModel(dados, colunas));
-            tabelaCliente.setRowHeight(30);
-        }
-        catch (SQLException e){
-            System.out.println("Erro ao obter clientes " + e.getMessage());
-        }
-    }
-
-    public void limpaDados(){
-        textFieldTelefone.setText("");
+    public void limparDados() {
+        textFieldNome.setText("");
+        textFieldCPF.setText("");
         textFieldEmail.setText("");
-        textFieldCpf.setText("");
-        textFieldName.setText("");
+        textFieldTelefone.setText("");
+        textFieldEndereco.setText("");
+
     }
 }
-
-

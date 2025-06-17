@@ -9,7 +9,7 @@ public class Homepage extends JFrame {
     public JPanel jPanelPrincipal;
     public JMenuBar jMenuBarPrincipal;
     public JMenu jMenuCadastro;
-    public JMenuItem jMenuItemPessoas;
+    public JMenuItem jMenuItemVendedor;
     public JMenuItem jMenuItemProdutos;
     public JPanel jPanelTopo;
     public JPanel jPanelImagem;
@@ -19,6 +19,7 @@ public class Homepage extends JFrame {
     private JMenuItem jMenuItemSair;
     private JMenuItem jMenuItemFornecedor;
     private JMenuItem vendas;
+    private JMenuItem jMenuItemCliente;
 
     public Homepage() {
         setContentPane(jPanelPrincipal);
@@ -27,21 +28,26 @@ public class Homepage extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-        jMenuItemPessoas.addActionListener(new ActionListener() {
+        jMenuItemVendedor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Clientes();
+                new Vendedores();
             }
         });
 
         jMenuItemProdutos.addActionListener(new ActionListener() {
            @Override
-           public void actionPerformed(ActionEvent e) {new Products();}
+           public void actionPerformed(ActionEvent e) {new Produtos();}
         });
 
         jMenuItemFornecedor.addActionListener(new ActionListener() {
            @Override
-           public void actionPerformed(ActionEvent e) {new Suppliers();}
+           public void actionPerformed(ActionEvent e) {new Fornecedores();}
+        });
+
+        jMenuItemCliente.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {new Clientes();}
         });
 
         jMenuItemSair.addActionListener(new ActionListener() {
@@ -57,11 +63,10 @@ public class Homepage extends JFrame {
             }
         });
 
-
         vendas.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Sell();
+                new Vendas();
             }
         });
     }

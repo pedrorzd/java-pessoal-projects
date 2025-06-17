@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.java.com.View.Products">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.java.com.View.Produtos">
   <grid id="27dc6" binding="jPanelProdutos" layout-manager="GridLayoutManager" row-count="3" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="5" right="5"/>
     <constraints>
@@ -72,10 +72,12 @@
           </component>
         </children>
       </grid>
-      <grid id="9527b" binding="JPanelDados" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="9527b" binding="JPanelDados" layout-manager="GridLayoutManager" row-count="6" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="0" row-span="2" col-span="7" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="2" col-span="7" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="400" height="200"/>
+          </grid>
         </constraints>
         <properties>
           <background color="-16621965"/>
@@ -104,12 +106,12 @@
           </component>
           <component id="34711" class="javax.swing.JLabel">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="8" use-parent-layout="false"/>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="8" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Arial" size="16"/>
               <foreground color="-2172450"/>
-              <text value="Preço &#10;&#10;entrada:"/>
+              <text value="Preço venda:"/>
             </properties>
           </component>
           <component id="f8a5e" class="javax.swing.JTextField" binding="textFieldCodigo">
@@ -118,7 +120,10 @@
                 <preferred-size width="200" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-16705498"/>
+            </properties>
           </component>
           <component id="64ba1" class="javax.swing.JTextField" binding="textFieldNome">
             <constraints>
@@ -126,19 +131,14 @@
                 <preferred-size width="200" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
-          </component>
-          <component id="fd2ca" class="javax.swing.JTextField" binding="textFieldPrecoEntrada">
-            <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="10" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="200" height="-1"/>
-              </grid>
-            </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-16705498"/>
+            </properties>
           </component>
           <component id="b300c" class="javax.swing.JLabel">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="8" use-parent-layout="false"/>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="8" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Arial" size="16"/>
@@ -146,13 +146,70 @@
               <text value="Fornecedor:"/>
             </properties>
           </component>
-          <component id="bcc56" class="javax.swing.JTextField" binding="textFieldFornecedor">
+          <component id="92619" class="javax.swing.JComboBox" binding="comboBoxFornecedor">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="10" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="200" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-16705498"/>
+            </properties>
+          </component>
+          <component id="e9e75" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="8" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16621965"/>
+              <font name="Arial" size="16"/>
+              <foreground color="-859926"/>
+              <text value="Preço entrada:"/>
+            </properties>
+          </component>
+          <component id="42447" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="8" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-859926"/>
+              <text value="Quantidade:"/>
+            </properties>
+          </component>
+          <component id="c7e96" class="javax.swing.JTextField" binding="textFieldQuantidade">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="10" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="40" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-16705498"/>
+            </properties>
+          </component>
+          <component id="fd2ca" class="javax.swing.JTextField" binding="textFieldPrecoEntrada">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="10" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="200" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-16705498"/>
+            </properties>
+          </component>
+          <component id="f0529" class="javax.swing.JTextField" binding="textFieldPrecoVenda">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="10" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-16705498"/>
+            </properties>
           </component>
         </children>
       </grid>

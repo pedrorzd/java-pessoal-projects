@@ -3,7 +3,7 @@ package main.java.com.View;
 import javax.swing.*;
 
 
-public class Suppliers extends JFrame {
+public class Fornecedores extends JFrame {
     public JPanel JPanelSuppliers;
     private JPanel JPanelInputs;
     private JPanel JPanelButtons;
@@ -20,7 +20,7 @@ public class Suppliers extends JFrame {
     private JRadioButton inativoRadioButton;
     private JTextField textField6;
 
-    public Suppliers() {
+    public Fornecedores() {
         setContentPane(JPanelSuppliers);
         setSize(600,450);
         setTitle("Cadastro de Fornecedores");

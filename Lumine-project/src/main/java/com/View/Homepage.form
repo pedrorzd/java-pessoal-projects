@@ -47,7 +47,7 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="a73aa" class="javax.swing.JMenuItem" binding="jMenuItemPessoas">
+                  <component id="a73aa" class="javax.swing.JMenuItem" binding="jMenuItemVendedor">
                     <constraints/>
                     <properties>
                       <background color="-16621965"/>
@@ -81,6 +81,17 @@
                       <text value="Fornecedores"/>
                     </properties>
                   </component>
+                  <component id="a92d2" class="javax.swing.JMenuItem" binding="jMenuItemCliente">
+                    <constraints/>
+                    <properties>
+                      <background color="-16621965"/>
+                      <font name="Arial" size="16"/>
+                      <foreground color="-859926"/>
+                      <icon value="main/java/com/View/img/pessoas-16px.png"/>
+                      <margin top="4" left="4" bottom="4" right="4"/>
+                      <text value="Clientes"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
               <grid id="48693" class="javax.swing.JMenu" binding="jMenuRelatorio" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -106,10 +117,11 @@
                 <properties>
                   <armed value="false"/>
                   <background color="-16621965"/>
+                  <enabled value="true"/>
                   <font name="Arial" size="20"/>
                   <foreground color="-1970438"/>
                   <icon value="main/java/com/View/img/venda.png"/>
-                  <selected value="true"/>
+                  <selected value="false"/>
                   <text value="Vendas"/>
                 </properties>
                 <border type="none"/>

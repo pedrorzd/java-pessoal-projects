@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ClienteDAO {
+public class ClientesDAO {
     public ResultSet ListaClientes(){
         String sql = "SELECT * FROM Clientes";
         try {
@@ -23,7 +23,7 @@ public class ClienteDAO {
     }
 
     public void InserirClienteBD(Clientes c){
-        String sql = "INSERT INTO Clientes(nome, cpf, email, telefone) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO Clientes(nome, cpf, endereco, telefone, email) VALUES (?, ?, ?, ?, ?)";
 
         try {
 
@@ -31,8 +31,9 @@ public class ClienteDAO {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, c.getNome());
             stmt.setString(2, c.getCpf());
-            stmt.setString(3, c.getEmail());
+            stmt.setString(3, c.getEndereco());
             stmt.setString(4, c.getTelefone());
+            stmt.setString(5, c.getEmail());
             stmt.executeUpdate();
         }
         catch (SQLException e){

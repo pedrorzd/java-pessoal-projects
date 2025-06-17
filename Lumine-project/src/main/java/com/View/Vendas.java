@@ -2,7 +2,7 @@ package main.java.com.View;
 
 import javax.swing.*;
 
-import main.java.com.Controller.ClienteDAO;
+import main.java.com.Controller.ClientesDAO;
 import main.java.com.Controller.VendedorDAO;
 import main.java.com.DAO.FabricaConexao;
 import main.java.com.Model.Clientes;
@@ -15,7 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class Sell extends JFrame{
+public class Vendas extends JFrame{
     private JButton novaVendaButton;
     private JButton finalizarVendaButton;
     private JButton sairButton;
@@ -42,8 +42,8 @@ public class Sell extends JFrame{
 
     double acumulado = 0.0;
 
-    public Sell(){
-        setSize(1300,1000);
+    public Vendas(){
+        setSize(850,750);
         setContentPane(JPanelVendas);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -124,7 +124,7 @@ public class Sell extends JFrame{
     private void preencherComboClintes(){
         try {
             Clientes clientes = new Clientes();
-            ClienteDAO cli = new ClienteDAO();
+            ClientesDAO cli = new ClientesDAO();
             ResultSet rs = cli.ListaClientes();
             ArrayList<String> listaClientes = new ArrayList<>();
             while (rs.next()){

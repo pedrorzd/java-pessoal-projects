@@ -1,11 +1,28 @@
 package main.java.com.Model;
 
 public class Vendedores {
+    private int id;
     private String nome;
     private String cpf;
     private String endereco;
     private String telefone;
+    private String email;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getNome() {
         return nome;

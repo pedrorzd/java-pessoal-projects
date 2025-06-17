@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.java.com.View.Sell">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.java.com.View.Vendas">
   <grid id="27dc6" binding="JPanelVendas" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="866" height="654"/>
+      <xy x="20" y="20" width="783" height="544"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-16621965"/>
+    </properties>
     <border type="none"/>
     <children>
-      <grid id="ba286" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="ba286" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="30">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="665" height="93"/>
+            <preferred-size width="400" height="93"/>
           </grid>
         </constraints>
         <properties>
-          <background color="-8176075"/>
+          <background color="-16621965"/>
+          <font name="Arial" size="16"/>
+          <foreground color="-859926"/>
         </properties>
         <border type="none"/>
         <children>
           <component id="1438a" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Selecione o Cliente"/>
             </properties>
           </component>
@@ -33,6 +39,9 @@
               <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-16621965"/>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Cartão de crédito"/>
             </properties>
           </component>
@@ -41,23 +50,10 @@
               <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-16621965"/>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="PIX"/>
-            </properties>
-          </component>
-          <component id="fbb1d" class="javax.swing.JRadioButton" binding="boletoRadioButton" default-binding="true">
-            <constraints>
-              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Boleto"/>
-            </properties>
-          </component>
-          <component id="23598" class="javax.swing.JRadioButton" binding="cartãoDébitoRadioButton" default-binding="true">
-            <constraints>
-              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Cartão débito"/>
             </properties>
           </component>
           <component id="700a7" class="javax.swing.JLabel">
@@ -65,28 +61,56 @@
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Forma de pagamento"/>
             </properties>
           </component>
           <component id="b2c3f" class="javax.swing.JComboBox" binding="comboBoxCliente">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="100" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
+          </component>
+          <component id="23598" class="javax.swing.JRadioButton" binding="cartãoDébitoRadioButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16621965"/>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
+              <text value="Cartão débito"/>
+            </properties>
+          </component>
+          <component id="fbb1d" class="javax.swing.JRadioButton" binding="boletoRadioButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16621965"/>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
+              <text value="Boleto"/>
+            </properties>
           </component>
         </children>
       </grid>
-      <grid id="275a1" layout-manager="GridLayoutManager" row-count="8" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="275a1" layout-manager="GridLayoutManager" row-count="9" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="10">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="665" height="231"/>
+            <preferred-size width="400" height="240"/>
           </grid>
         </constraints>
         <properties>
-          <background color="-10199458"/>
+          <background color="-16626591"/>
+          <font name="Arial" size="14"/>
+          <foreground color="-859926"/>
         </properties>
         <border type="none"/>
         <children>
@@ -95,6 +119,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Código produto"/>
             </properties>
           </component>
@@ -103,6 +129,8 @@
               <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Descrição produto"/>
             </properties>
           </component>
@@ -112,7 +140,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
           </component>
           <component id="887c7" class="javax.swing.JTextField" binding="textField3" default-binding="true">
             <constraints>
@@ -120,13 +150,17 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
           </component>
           <component id="a6cfb" class="javax.swing.JLabel">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Desconto"/>
             </properties>
           </component>
@@ -135,6 +169,8 @@
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Acrésimo"/>
             </properties>
           </component>
@@ -143,6 +179,8 @@
               <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Valor unitario"/>
             </properties>
           </component>
@@ -151,6 +189,8 @@
               <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Total"/>
             </properties>
           </component>
@@ -160,7 +200,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
           </component>
           <component id="e9072" class="javax.swing.JTextField" binding="textField7" default-binding="true">
             <constraints>
@@ -168,7 +210,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
           </component>
           <component id="31b09" class="javax.swing.JTextField" binding="textField8" default-binding="true">
             <constraints>
@@ -176,7 +220,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
           </component>
           <component id="91f1f" class="javax.swing.JTextField" binding="textField9" default-binding="true">
             <constraints>
@@ -184,23 +230,30 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
           </component>
           <component id="d2a7d" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Valor unitario"/>
             </properties>
           </component>
           <grid id="28d2d" class="javax.swing.JMenuBar" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="5" column="0" row-span="3" col-span="5" vsize-policy="3" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="0" row-span="3" col-span="5" vsize-policy="3" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="400" height="-1"/>
+              </grid>
             </constraints>
             <properties>
-              <foreground color="-9407883"/>
+              <background color="-16621965"/>
+              <foreground color="-16621965"/>
             </properties>
             <border type="none"/>
             <children>
@@ -209,6 +262,9 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <background color="-16621965"/>
+                  <font name="Arial" size="16"/>
+                  <foreground color="-859926"/>
                   <text value="Nova venda"/>
                 </properties>
               </component>
@@ -217,6 +273,9 @@
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <background color="-16621965"/>
+                  <font name="Arial" size="16"/>
+                  <foreground color="-859926"/>
                   <text value="Finalizar venda"/>
                 </properties>
               </component>
@@ -227,6 +286,9 @@
               <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-16621965"/>
+              <font name="Arial" size="16"/>
+              <foreground color="-859926"/>
               <text value="Inserir"/>
             </properties>
           </component>
@@ -234,17 +296,21 @@
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
           </component>
         </children>
       </grid>
       <grid id="28490" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="1" row-span="3" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="3" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+          </grid>
         </constraints>
         <properties>
-          <background color="-4604552"/>
+          <background color="-16624781"/>
         </properties>
         <border type="none"/>
         <children>
@@ -266,59 +332,29 @@
           </component>
         </children>
       </grid>
-      <grid id="122b6" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="122b6" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="10">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="665" height="102"/>
+            <preferred-size width="400" height="102"/>
           </grid>
         </constraints>
         <properties>
-          <background color="-10199458"/>
+          <background color="-16621965"/>
+          <font name="Arial" size="16"/>
+          <foreground color="-859926"/>
         </properties>
         <border type="none"/>
         <children>
           <component id="235ae" class="javax.swing.JButton" binding="sairButton" default-binding="true">
             <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-16621965"/>
+              <font name="Arial" size="16"/>
+              <foreground color="-859926"/>
               <text value="Sair"/>
-            </properties>
-          </component>
-          <hspacer id="dba08">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </hspacer>
-          <component id="f0fdb" class="javax.swing.JComboBox" binding="comboBoxVendedor">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="332a3" class="javax.swing.JTextField" binding="textField1" default-binding="true">
-            <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="67043" class="javax.swing.JTextField" binding="textField2" default-binding="true">
-            <constraints>
-              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="afdb3" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Selecionar vendedor"/>
             </properties>
           </component>
           <component id="3f737" class="javax.swing.JLabel">
@@ -326,6 +362,8 @@
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Data venda"/>
             </properties>
           </component>
@@ -334,7 +372,47 @@
               <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
               <text value="Código venda"/>
+            </properties>
+          </component>
+          <component id="332a3" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
+          </component>
+          <component id="67043" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
+            </properties>
+          </component>
+          <component id="afdb3" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-859926"/>
+              <text value="Selecionar vendedor"/>
+            </properties>
+          </component>
+          <component id="f0fdb" class="javax.swing.JComboBox" binding="comboBoxVendedor">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
             </properties>
           </component>
         </children>
