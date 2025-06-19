@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class FornecedoresDAO {
     public void inserirFornecedor(Fornecedores fornecedor) {
-        String query = "INSERT INT Fornecedores (nomeFornecedor, cnpj, endereco, emailFornecedor, telefoneFornecedor, produto, statusDeAtividade) VALUES (?,?,?,?,?,?,?)";
+        String query = "INSERT INTO Fornecedores (nomeFornecedor, cnpj, endereco, emailFornecedor, telefoneFornecedor, produto, statusDeAtividade) VALUES (?,?,?,?,?,?,?)";
         try {
             Connection conn = FabricaConexao.conectar();
             PreparedStatement stmt = conn.prepareStatement(query);
