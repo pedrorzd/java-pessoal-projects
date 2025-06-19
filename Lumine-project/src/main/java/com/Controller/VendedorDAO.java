@@ -28,6 +28,37 @@ public class VendedorDAO {
         }
     }
 
+    public void deletaDados(Vendedores vendedor){
+        String query = "DELETE FROM vendedores WHERE id = ?";
+
+        try(Connection connection = FabricaConexao.conectar();
+            PreparedStatement pstmt = connection.prepareStatement(query)){
+            pstmt.setInt(1, vendedor.getId());
+            pstmt.executeUpdate();
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void alteraDados(Vendedores vendedor){
+        String query = "UPDATE vendedores SET nome = ?, cpf = ?, endereco = ?, telefone = ?, email = ?  WHERE id = ? ";
+
+        try(Connection connection = FabricaConexao.conectar();
+        PreparedStatement pstmt = connection.prepareStatement(query)){
+            pstmt.setString(1, vendedor.getNome());
+            pstmt.setString(2, vendedor.getCpf());
+            pstmt.setString(3, vendedor.getEndereco());
+            pstmt.setString(4, vendedor.getTelefone());
+            pstmt.setString(5, vendedor.getEmail());
+            pstmt.setInt(6, vendedor.getId());
+            pstmt.executeUpdate();
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
     public ResultSet ListaVendedores(){
         String sql = "SELECT * FROM Vendedores";
         try {

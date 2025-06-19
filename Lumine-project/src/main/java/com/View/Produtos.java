@@ -1,6 +1,8 @@
 package main.java.com.View;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Produtos extends JFrame {
     public JPanel jPanelProdutos;
@@ -10,11 +12,12 @@ public class Produtos extends JFrame {
     private JButton saveButton;
     private JPanel JPanelButtons;
     private JButton editarButton;
-    private JButton limparButton;
     private JPanel JPanelDados;
     private JComboBox comboBoxFornecedor;
     private JTextField textFieldQuantidade;
     private JTextField textFieldPrecoVenda;
+    private JButton limparButton;
+    private JButton excluirButton;
 
     public Produtos(){
         setContentPane(jPanelProdutos);
@@ -24,5 +27,33 @@ public class Produtos extends JFrame {
         setLocationRelativeTo(null);
         pack();
         setVisible(true);
+
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        editarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        limparButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        excluirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 }

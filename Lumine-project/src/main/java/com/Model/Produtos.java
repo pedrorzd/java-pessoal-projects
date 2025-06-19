@@ -4,7 +4,7 @@ public class Produtos {
     private int id;
     private String descricao;
     private double precoEntrada;
-    private int precoVenda;
+    private double precoVenda;
     private String codigo;
     private String fornecedor;
     private int quantidade;
@@ -49,11 +49,11 @@ public class Produtos {
         this.descricao = descricao;
     }
 
-    public int getPrecoVenda() {
+    public double getPrecoVenda() {
         return precoVenda;
     }
 
-    public void setPrecoVenda(int precoVenda) {
+    public void setPrecoVenda(double precoVenda) {
         this.precoVenda = precoVenda;
     }
 

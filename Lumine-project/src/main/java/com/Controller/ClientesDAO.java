@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ClientesDAO {
+
     public ResultSet ListaClientes(){
         String sql = "SELECT * FROM Clientes";
         try {
@@ -41,13 +42,31 @@ public class ClientesDAO {
         }
     }
 
+    public void alteraDados(Clientes clientes){
+        String query = "UPDATE clientes SET nome = ?, cpf = ?, endereco = ?, telefone = ?, email = ? WHERE id = ?";
+
+        try(Connection connection = FabricaConexao.conectar();
+            PreparedStatement pstmt = connection.prepareStatement(query)){
+            pstmt.setString(1, clientes.getNome());
+            pstmt.setString(2, clientes.getCpf());
+            pstmt.setString(3, clientes.getEndereco());
+            pstmt.setString(4, clientes.getTelefone());
+            pstmt.setString(5, clientes.getEmail());
+            pstmt.setInt(6, clientes.getId());
+            pstmt.executeUpdate();
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
     public void deletaDados(main.java.com.Model.Clientes c){
         String query = "DELETE FROM Clientes WHERE id = ?";
 
         try(Connection connection = FabricaConexao.conectar();
             PreparedStatement pstmt = connection.prepareStatement(query)){
             pstmt.setInt(1, c.getId());
-            pstmt.executeQuery();
+            pstmt.executeUpdate();
         }
         catch (SQLException e){
             e.printStackTrace();

@@ -28,12 +28,10 @@ public class LoginDAO {
                 levaDados.setLogin(rs.getNString("userName"));
                 levaDados.setSenha(rs.getNString("password"));
                 levaDados.setPerfil(rs.getNString("profile"));
-
             }
-
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println("Erro ao validar login: " + e.getMessage());
-
         }
         return levaDados;
     }

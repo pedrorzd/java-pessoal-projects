@@ -28,22 +28,21 @@ public class Vendedores extends JFrame {
     private JPanel tabelaVendedores;
     private JTable tabelaVendedor;
     private JTextField textFieldEndereco;
+    private JTextField textFieldId;
 
     public Vendedores() {
         setContentPane(jPanelVendedores);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Vendedores");
-        setSize(600,450);
+        setSize(800,700);
         setLocationRelativeTo(null);
         setVisible(true);
         carregarDados();
 
-        //botao de acicionar vendedor no BD
+        //açoes de botoes que interferem no banco de dados
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                carregarDados();
-
                 String nome = textFieldName.getText().toString().trim();
                 String cpf = textFieldCpf.getText().toString().trim();
                 String endereco = textFieldEndereco.getText().toString().trim();
@@ -60,30 +59,55 @@ public class Vendedores extends JFrame {
                 VendedorDAO vendedorDAO = new VendedorDAO();
                 vendedorDAO.InserirVendedorBD(vendedor);
 
-            }
-        });
-        /*
-        excluirButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // textid dando erro por que é o campo do ID, como no meu nao tem, da um erro
-                int id = Integer.parseInt(textId.getText().toString());
-                main.java.com.Model.Clientes clientes = new main.java.com.Model.Clientes();
-                clientes.setId(id);
-                ClienteDAO cliDAO = new ClienteDAO();
-                cliDAO.deletaDados(clientes);
                 carregarDados();
                 limpaDados();
             }
         });
-         */
+        excluirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int id = Integer.parseInt(textFieldId.getText().toString());
+
+                main.java.com.Model.Vendedores vendedor = new main.java.com.Model.Vendedores();
+                vendedor.setId(id);
+
+                VendedorDAO vendedorDAO = new VendedorDAO();
+                vendedorDAO.deletaDados(vendedor);
+
+                carregarDados();
+                limpaDados();
+            }
+        });
         limparButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 limpaDados();
+                carregarDados();
             }
         });
+        editarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            int id = Integer.parseInt(textFieldId.getText().toString());
+            String nome = textFieldName.getText().toString().trim();
+            String cpf = textFieldCpf.getText().toString().trim();
+            String endereco = textFieldEndereco.getText().toString().trim();
+            String email = textFieldEmail.getText().toString().trim();
+            String telefone = textFieldTelefone.getText().toString().trim();
 
+            main.java.com.Model.Vendedores vendedor = new main.java.com.Model.Vendedores();
+            vendedor.setId(id);
+            vendedor.setNome(nome);
+            vendedor.setCpf(cpf);
+            vendedor.setEndereco(endereco);
+            vendedor.setEmail(email);
+            vendedor.setTelefone(telefone);
+
+            VendedorDAO vendedorDAO = new VendedorDAO();
+            vendedorDAO.alteraDados(vendedor);
+            carregarDados();
+            }
+        });
 
         //selecionar linha da tabela
         tabelaVendedor.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
@@ -92,22 +116,23 @@ public class Vendedores extends JFrame {
                 if (!e.getValueIsAdjusting()){
                     int linhaSelecionada = tabelaVendedor.getSelectedRow();
                     if (linhaSelecionada !=1){
-
-                        textFieldName.setText(tabelaVendedor.getValueAt(linhaSelecionada, 0).toString());
-                        textFieldCpf.setText(tabelaVendedor.getValueAt(linhaSelecionada, 1).toString());
-                        textFieldEmail.setText(tabelaVendedor.getValueAt(linhaSelecionada, 2).toString());
-                        textFieldTelefone.setText(tabelaVendedor.getValueAt(linhaSelecionada, 3).toString());
-
+                        textFieldId.setText(tabelaVendedor.getValueAt(linhaSelecionada, 0).toString());
+                        textFieldName.setText(tabelaVendedor.getValueAt(linhaSelecionada, 1).toString());
+                        textFieldCpf.setText(tabelaVendedor.getValueAt(linhaSelecionada, 2).toString());
+                        textFieldEndereco.setText(tabelaVendedor.getValueAt(linhaSelecionada, 3).toString());
+                        textFieldTelefone.setText(tabelaVendedor.getValueAt(linhaSelecionada, 4).toString());
+                        textFieldEmail.setText(tabelaVendedor.getValueAt(linhaSelecionada, 5).toString());
                     }
                 }
             }
         });
+
     }
 
     public void carregarDados(){
         try(Connection conn = FabricaConexao.conectar()){
 
-            String query = "Select id, nome, cpf, endereco, telefone, email From Clientes";
+            String query = "Select id, nome, cpf, endereco, telefone, email From Vendedores";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 
@@ -132,7 +157,7 @@ public class Vendedores extends JFrame {
             }
             //cria tabela com linhas e colunas
             tabelaVendedor.setModel(new DefaultTableModel(dados, colunas));
-            tabelaVendedor.setRowHeight(30);
+            tabelaVendedor.setRowHeight(20);
         }
         catch (SQLException e){
             System.out.println("Erro ao obter clientes " + e.getMessage());
