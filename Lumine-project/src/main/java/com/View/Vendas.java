@@ -29,10 +29,6 @@ public class Vendas extends JFrame{
     private JRadioButton cartãoDébitoRadioButton;
     private JTextField textField3;
     private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
-    private JTextField textField9;
     private StringBuilder itensSelecionados;
     private JPanel JPanelVendas;
     private JButton inserirButton;
@@ -51,21 +47,23 @@ public class Vendas extends JFrame{
         preencherComboProduto();
         preencherComboClintes();
         preencherComboVendedores();
-        itensSelecionados = new StringBuilder("Valor total: <br>");
 
+        itensSelecionados = new StringBuilder("Valor total: <br>");
         jcbProduto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nomeSelecionado = (String) jcbProduto.getSelectedItem();
                 if (nomeSelecionado != null){
                     try {
-                        String sql = "SELECT precoVenda FROM produtos WHERE descricao = ?";
+                        String sql = "SELECT precoVenda, codProduto FROM produtos WHERE descricao = ?";
                         PreparedStatement ps = FabricaConexao.conectar().prepareStatement(sql);
                         ps.setString(1, nomeSelecionado);
                         ResultSet rs = ps.executeQuery();
                         if (rs.next()){
                             double preco = rs.getDouble("precoVenda");
                             textField5.setText(String.format("%.2f", preco));
+                            String codigo = rs.getString("codProduto");
+                            textField3.setText(codigo);
                         }
                         else{
                             textField5.setText("Não encontrado");
@@ -91,15 +89,20 @@ public class Vendas extends JFrame{
 
                      acumulado += precoProdutoValor;
 
-                     labelListaProd.setText("<html>" + itensSelecionados.toString()+"</html>");
-
                      textField5.setText("");
 
                      itensSelecionados.append(nomeProduto).append("<br>");
                      itensSelecionados.append(precoProdutoTexto).append("<br>");
+                     labelListaProd.setText("<html>" + itensSelecionados.toString()+"</html>");
 
                      labelValorTotal.setText("Valor total: " + acumulado);
                  }
+            }
+        });
+        sairButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
             }
         });
     }

@@ -42,7 +42,7 @@ public class Fornecedores extends JFrame {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
-
+        carregarDados();
 
         adicionarButton.addActionListener(new ActionListener() {
             @Override
@@ -53,7 +53,15 @@ public class Fornecedores extends JFrame {
                 String email = textFieldEmail.getText();
                 String endereco = textFieldEndereco.getText();
                 String tipoProduto = textFieldTipoProduto.getText();
-                String status = inativoRadioButton.isSelected() ? "INATIVO" : "ATIVO";
+                String status = null;
+                if (ativoRadioButton.isSelected()) {
+                    inativoRadioButton.setSelected(false);
+                    status = "Ativo";
+                }
+                else if (inativoRadioButton.isSelected()) {
+                    ativoRadioButton.setSelected(false);
+                    status = "Inativo";
+                }
 
                 main.java.com.Model.Fornecedores fornecedor = new main.java.com.Model.Fornecedores();
                 fornecedor.setNomeFornecedor(nome);
@@ -88,7 +96,15 @@ public class Fornecedores extends JFrame {
                 String email = textFieldEmail.getText().toString().trim();
                 String endereco = textFieldEndereco.getText().toString().trim();
                 String tipoProduto = textFieldTipoProduto.getText().toString().trim();
-                String status = inativoRadioButton.isSelected() ? "INATIVO" : "ATIVO";
+                String status = null;
+                if (ativoRadioButton.isSelected()) {
+                    inativoRadioButton.setSelected(false);
+                    status = "Ativo";
+                }
+                else if (inativoRadioButton.isSelected()) {
+                    ativoRadioButton.setSelected(false);
+                    status = "Inativo";
+                }
 
                 main.java.com.Model.Fornecedores fornecedor = new main.java.com.Model.Fornecedores();
                 fornecedor.setNomeFornecedor(nome);

@@ -18,7 +18,8 @@ public class ProdutosDAO {
             stmt.setDouble(2, produto.getPrecoEntrada());
             stmt.setDouble(3, produto.getPrecoVenda());
             stmt.setInt(4, produto.getQuantidade());
-            stmt.setString(5, produto.getFornecedor());
+            stmt.setString(5, produto.getCodigo());
+            stmt.setString(6, produto.getFornecedor());
             stmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println("Erro ao inserir produto: " + e.getMessage());;
@@ -27,7 +28,6 @@ public class ProdutosDAO {
 
     public void alterarDados(Produtos produto) {
         String query = "UPDATE produtos SET descricao = ?, precoCompra = ?, precoVenda = ?, qtdeEstoque = ?, codProduto = ?, fornecedor = ? WHERE id = ?";
-
         try {
             Connection conn = FabricaConexao.conectar();
             PreparedStatement pstmt = conn.prepareStatement(query);
@@ -36,8 +36,9 @@ public class ProdutosDAO {
             pstmt.setDouble(2, produto.getPrecoEntrada());
             pstmt.setDouble(3, produto.getPrecoVenda());
             pstmt.setInt(4, produto.getQuantidade());
-            pstmt.setString(5, produto.getFornecedor());
-            pstmt.setInt(6, produto.getId());
+            pstmt.setString(5, produto.getCodigo());
+            pstmt.setString(6, produto.getFornecedor());
+            pstmt.setInt(7, produto.getId());
             pstmt.executeUpdate();
         }
         catch (SQLException e){

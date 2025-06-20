@@ -69,7 +69,6 @@ public class Login extends JFrame {
             }
         });
 
-
         JFieldUsuario.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
