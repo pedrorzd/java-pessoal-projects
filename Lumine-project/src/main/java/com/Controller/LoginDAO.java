@@ -23,7 +23,6 @@ public class LoginDAO {
             stmt.setString(3, profile);
             ResultSet rs = stmt.executeQuery();
             while(rs.next()){
-                // result=1;
                 levaDados = new Usuarios();
                 levaDados.setLogin(rs.getNString("userName"));
                 levaDados.setSenha(rs.getNString("password"));

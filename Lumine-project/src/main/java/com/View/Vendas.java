@@ -75,6 +75,7 @@ public class Vendas extends JFrame{
                 }
             }
         });
+
         inserirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -95,18 +96,48 @@ public class Vendas extends JFrame{
                      itensSelecionados.append(precoProdutoTexto).append("<br>");
                      labelListaProd.setText("<html>" + itensSelecionados.toString()+"</html>");
 
-                     labelValorTotal.setText("Valor total: " + acumulado);
+                     labelValorTotal.setText("Valor total :" + String.format("%.2f", acumulado));
                  }
             }
         });
+
         sairButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
             }
         });
+
+        novaVendaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                limpaDados();
+            }
+        });
+        finalizarVendaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                limpaDados();
+            }
+        });
     }
 
+    public void limpaDados(){
+        textField1.setText("");
+        textField2.setText("");
+        comboBoxCliente.setSelectedIndex(0);
+        comboBoxVendedor.setSelectedIndex(0);
+        jcbProduto.setSelectedIndex(0);
+        textField3.setText("");
+        textField5.setText("");
+        PIXRadioButton.setSelected(false);
+        boletoRadioButton.setSelected(false);
+        cartãoDeCréditoRadioButton.setSelected(false);
+        cartãoDébitoRadioButton.setSelected(false);
+        itensSelecionados.setLength(0);
+        labelListaProd.setText("");
+        labelValorTotal.setText("");
+    }
 
     private void preencherComboProduto(){
         try {

@@ -168,8 +168,8 @@
               <foreground color="-2172450"/>
               <model>
                 <item value=""/>
-                <item value="administrador"/>
-                <item value="usuario"/>
+                <item value="Administrador"/>
+                <item value="Usuário"/>
               </model>
             </properties>
           </component>

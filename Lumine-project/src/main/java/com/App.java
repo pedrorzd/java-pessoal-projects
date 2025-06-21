@@ -12,13 +12,12 @@ public class App extends JFrame {
         JFrame jf = new JFrame();
         jf.setTitle("Lumine Glam");
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.setContentPane(new Login().JPanelLogin);
+        jf.setContentPane(new Homepage().jPanelPrincipal);
         jf.setSize(850,750);
         jf.setLocationRelativeTo(null);
         jf.setVisible(true);
     }
 }
-
 
  /*
  ----SENHA PARA ACESSAR O SISTEMA----
@@ -26,6 +25,17 @@ public class App extends JFrame {
  123456
  Administrador
   */
+
+/*
+SENHA DAO
+user: root
+senha: root
+
+alterar se necessário
+ */
+
+
+
 
 
 /*
@@ -100,15 +110,15 @@ PRIMARY KEY (`id`)
 INSERT INTO clientes (nome, cpf, endereco, telefone, email) VALUES
 
 ('João da Silva', '12345678901', 'Rua das Flores, 100', '31987654321', 'joao@gmail.com'),
-        ('Maria Oliveira', '98765432100', 'Av. Brasil, 456', '31976543210', 'maria.oliveira@yahoo.com'),
-        ('Carlos Mendes', '45612378900', 'Rua A, 321', '31988887777', 'carlos.mendes@outlook.com'),
-        ('Ana Beatriz', '32165498700', 'Rua B, 654', '31999998888', 'ana.b@gmail.com'),
-        ('Lucas Ferreira', '74185296300', 'Travessa C, 22', '31999887766', 'lucasf@uol.com.br'),
-        ('Fernanda Souza', '96325874100', 'Av. Contorno, 999', '31991234567', 'fernanda.souza@hotmail.com'),
-        ('Ricardo Lima', '85274196300', 'Rua das Palmeiras, 123', '31993456789', 'ricardo.lima@globo.com'),
-        ('Juliana Alves', '74196385200', 'Alameda Santos, 44', '31997654321', 'juliana.alves@gmail.com'),
-        ('Bruno Rocha', '36925814700', 'Rua Goiás, 110', '31994561234', 'bruno.rocha@yahoo.com'),
-        ('Patrícia Nunes', '15975348600', 'Praça Sete, 1', '31991239876', 'patricia.nunes@ig.com.br');
+('Maria Oliveira', '98765432100', 'Av. Brasil, 456', '31976543210', 'maria.oliveira@yahoo.com'),
+('Carlos Mendes', '45612378900', 'Rua A, 321', '31988887777', 'carlos.mendes@outlook.com'),
+('Ana Beatriz', '32165498700', 'Rua B, 654', '31999998888', 'ana.b@gmail.com'),
+('Lucas Ferreira', '74185296300', 'Travessa C, 22', '31999887766', 'lucasf@uol.com.br'),
+('Fernanda Souza', '96325874100', 'Av. Contorno, 999', '31991234567', 'fernanda.souza@hotmail.com'),
+('Ricardo Lima', '85274196300', 'Rua das Palmeiras, 123', '31993456789', 'ricardo.lima@globo.com'),
+('Juliana Alves', '74196385200', 'Alameda Santos, 44', '31997654321', 'juliana.alves@gmail.com'),
+('Bruno Rocha', '36925814700', 'Rua Goiás, 110', '31994561234', 'bruno.rocha@yahoo.com'),
+('Patrícia Nunes', '15975348600', 'Praça Sete, 1', '31991239876', 'patricia.nunes@ig.com.br');
 
 INSERT INTO fornecedores (nomeFornecedor, cnpj, endereco, emailFornecedor, telefoneFornecedor, produto, statusDeAtividade) VALUES
 ('Moda Minas', '12345678000199', 'Rua das Confecções, 500', 'contato@modaminas.com', '31993334444', 'Camisetas', 'Ativo'),
@@ -160,7 +170,5 @@ INSERT INTO vendedores (nome, cpf, endereco, telefone, email) VALUES
 ('Juliana Varejo', '80808080808', 'Rua Centro, 80', '31990890123', 'juliana@empresa.com'),
 ('Bruno Peças', '90909090909', 'Rua Peças, 90', '31990901234', 'bruno@empresa.com'),
 ('Patrícia Têxtil', '11223344556', 'Rua Tecidos, 100', '31991012345', 'patricia@empresa.com');
-
-
 
  */

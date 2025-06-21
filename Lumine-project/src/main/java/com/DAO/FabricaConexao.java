@@ -6,11 +6,10 @@ import java.sql.SQLException;
 
 public class FabricaConexao {
     //private static final String URL ="jdbc:mysql://192.168.0.19:3306/lumineGlam";
-    //private static final String URL ="jdbc:mysql://localhost:3306/lumineGlam";
 
-    private static final String URL ="jdbc:mysql://192.168.0.19:3306/lumineGlam";
+    private static final String URL ="jdbc:mysql://localhost:3306/lumineGlam";
     private static final String USUARIO = "root";
-    private static final String SENHA = "123456";
+    private static final String SENHA = "root";
 
     public static Connection conectar(){
         try {

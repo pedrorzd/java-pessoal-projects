@@ -1,5 +1,7 @@
 package main.java.com.View;
 
+import main.java.com.Model.Usuarios;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,6 +22,7 @@ public class Homepage extends JFrame {
     private JMenuItem jMenuItemFornecedor;
     private JMenuItem vendas;
     private JMenuItem jMenuItemCliente;
+    private JMenuItem JMenuItemUsuario;
 
     public Homepage() {
         setContentPane(jPanelPrincipal);
